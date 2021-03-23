@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/forCBR"
+     xml:base="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/forCBR">
+     ontologyIRI="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD">
     <Prefix name="" IRI="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/forCBR"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
@@ -112,10 +112,16 @@
         <Class IRI="#Sequential_pattern_discovery"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#item"/>
+        <Class IRI="#item_type"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#item_type"/>
+        <Class IRI="#maintenanble_item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#maintenanble_item_record"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#number_if_input_variables"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#configuration_described_by"/>
@@ -176,7 +182,7 @@
     </Declaration>
     <EquivalentClasses>
         <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/Artifact"/>
-        <Class IRI="#item"/>
+        <Class IRI="#maintenanble_item"/>
     </EquivalentClasses>
     <SubClassOf>
         <Class IRI="http://purl.obolibrary.org/obo/BFO_0000034"/>
@@ -489,7 +495,7 @@
         <Class IRI="#Predictive_maintenance_model"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_about"/>
-            <Class IRI="#item"/>
+            <Class IRI="#maintenanble_item"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -598,17 +604,6 @@
         <Class IRI="#Data_mining_technique_function"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#item"/>
-        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000030"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#item"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000085"/>
-            <Class IRI="http://purl.obolibrary.org/obo/BFO_0000034"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#item_type"/>
         <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
     </SubClassOf>
@@ -616,8 +611,27 @@
         <Class IRI="#item_type"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#describes_type"/>
-            <Class IRI="#item"/>
+            <Class IRI="#maintenanble_item"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#maintenanble_item"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#maintenanble_item"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000085"/>
+            <Class IRI="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#maintenanble_item_record"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/Database"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#number_if_input_variables"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
     </SubClassOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#configuration_described_by"/>
@@ -738,6 +752,46 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Association_discovery</IRI>
+        <Literal>A function whose purpose is the discovery of association pattern from data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Association_discovery</IRI>
+        <Literal>association discovery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Classification</IRI>
+        <Literal>A function whose purpose is the separation of data based on predefined parameters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Classification</IRI>
+        <Literal>classification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Clustering</IRI>
+        <Literal>A function whose purpose is the agrupation of data with similar characteristics</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Clustering</IRI>
+        <Literal>clustering</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Data_mining_technique_function</IRI>
+        <Literal>An realizable entity that is the purpose of data mining technique</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Data_mining_technique_function</IRI>
+        <Literal>data mining technique fucntion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
         <IRI>#Design_detail</IRI>
         <Literal>A generic quality of predictive maintenance modules that contains important design details that have not been previously designated in other classes.</Literal>
     </AnnotationAssertion>
@@ -745,6 +799,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Design_detail</IRI>
         <Literal>Design detail</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Deviation_detection</IRI>
+        <Literal>A function whose purpose is to detect changes in the known behavior of a set of data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Deviation_detection</IRI>
+        <Literal>deviation detection</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
@@ -777,6 +841,11 @@
         <Literal>Model configuration</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Model_type</IRI>
+        <Literal>A descriptive information content entity that describes the family of a predicitive maintenance model</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Model_type</IRI>
         <Literal>Model type</Literal>
@@ -794,7 +863,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
         <IRI>#Number_of_failure_modes</IRI>
-        <Literal>A quality of a maintenable item, limited to an integer value.</Literal>
+        <Literal>A quality that states the number of failures modes that are known from a maintainable item</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -843,6 +912,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Predictive_maintenance_module_function</IRI>
+        <Literal>An realizable entity that is the purpose of a predictive maintenance module</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Predictive_maintenance_module_function</IRI>
+        <Literal>predictive maintenance module function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
         <IRI>#Predictive_maintence_case</IRI>
         <Literal>A designative information content entity that provides a name to a case in a case base. It is about a predictive maintenance model explained in a predictive maintenance article</Literal>
     </AnnotationAssertion>
@@ -850,6 +929,36 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Predictive_maintence_case</IRI>
         <Literal>Predictive maintenance case</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Publication_year</IRI>
+        <Literal>A integer value that represents the Gregorian year in which an article was publised</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Publication_year</IRI>
+        <Literal>Publication year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Regression</IRI>
+        <Literal>A function whose purpose is the search of trends in data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Regression</IRI>
+        <Literal>regression</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Sequential_pattern_discovery</IRI>
+        <Literal>A function whose purpose is the search of sequential patterns</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sequential_pattern_discovery</IRI>
+        <Literal>sequential pattern discovery</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -907,9 +1016,44 @@
         <Literal>is implied by</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#item_type</IRI>
+        <Literal>A descriptive information content entity that describes the family of an item from the predicitive maintenance perspective</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#item_type</IRI>
         <Literal>item type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>#maintenanble_item</IRI>
+        <Literal>definition based on IEC 60812:2018</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#maintenanble_item</IRI>
+        <Literal>Subject being considered for maintenance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#maintenanble_item</IRI>
+        <Literal>maintenanble item</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#maintenanble_item_record</IRI>
+        <Literal>maintainable item record</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#number_if_input_variables</IRI>
+        <Literal>A quality that states the number of input variables that are used in a predictive maintenance model for a specific item in predictive maintenance case.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#number_if_input_variables</IRI>
+        <Literal>number of input variables</Literal>
     </AnnotationAssertion>
 </Ontology>
 
