@@ -832,6 +832,66 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Fault_detection</IRI>
+        <Literal>A function whose purpose is the search of faults by assessing some maintenable item parameters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Fault_detection</IRI>
+        <Literal>Fault detection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Fault_feature_extraction</IRI>
+        <Literal>A function whose purpose is purpose is the identification of symptoms that correspond to a specific fault</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Fault_feature_extraction</IRI>
+        <Literal>Fault feature extraction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Fault_identification</IRI>
+        <Literal>A function whose purpose is the comparison of the symtoms against known criteria to identify a specific fault</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Fault_identification</IRI>
+        <Literal>Fault identification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Future_state_forecast</IRI>
+        <Literal>A function whose purpose is the forecast of the condition for the next cycle operational cycle based on the current state of the maintenanble item</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Future_state_forecast</IRI>
+        <Literal>Future state forecast</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Health_assessment</IRI>
+        <Literal>A function whose purpose is to rate the current condition of a maintainable item against a predefined scale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Health_assessment</IRI>
+        <Literal>Health assessment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Health_modelling</IRI>
+        <Literal>A function whose purpose is to establish a scale to rate the condition of a maintainable item</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Health_modelling</IRI>
+        <Literal>Health modelling</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
         <IRI>#Model_configuration</IRI>
         <Literal>An arrangement of models in a predictive maintenance module</Literal>
     </AnnotationAssertion>
@@ -949,6 +1009,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Regression</IRI>
         <Literal>regression</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Remaining_useful_life_estimation</IRI>
+        <Literal>A function whose purpose is the forecast of the remining operational life based on the current state of the maintenanble item</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Remaining_useful_life_estimation</IRI>
+        <Literal>Remaining useful life estimation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
