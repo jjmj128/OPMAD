@@ -1,0 +1,919 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/forCBR"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/forCBR">
+    <Prefix name="" IRI="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/forCBR"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/ArtifactOntology</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/EventOntology</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/InformationEntityOntology</Import>
+    <Declaration>
+        <Class IRI="#Article_identifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Article_title"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Association_discovery"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Classification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Clustering"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Data_mining_technique_function"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Design_detail"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Deviation_detection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Failure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Failure_mode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fault_detection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fault_feature_extraction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fault_identification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Future_state_forecast"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Health_assessment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Health_modelling"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Model_configuration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Model_type"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Module_synchronization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Number_of_failure_modes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Performance_indicator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Performance_value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Predictive_Maintenance_Article"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Predictive_Maintenance_case_base"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Predictive_maintenance_model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Predictive_maintenance_module_function"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Predictive_maintenance_system_module"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Predictive_maintence_case"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Publication_year"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Regression"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Remaining_useful_life_estimation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sequential_pattern_discovery"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#item_type"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#configuration_described_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#describes_configuration"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#describes_failure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#describes_type"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#explained_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#explains"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#failure_described_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_design_detail"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_identifier"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_predictive_maintenance_function"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_publication_year"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_synchronization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_title"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#implies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_implied_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#type_described_by"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_double_value"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_interger_value"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_text_value"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/Artifact"/>
+        <Class IRI="#item"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_affected_by"/>
+            <Class IRI="#Failure"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article_identifier"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/ArtifactIdentifier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article_identifier"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_about"/>
+            <Class IRI="#Predictive_Maintenance_Article"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article_identifier"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_text_value"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article_title"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DesignativeName"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article_title"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_about"/>
+            <Class IRI="#Predictive_Maintenance_Article"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article_title"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_text_value"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Association_discovery"/>
+        <Class IRI="#Data_mining_technique_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Classification"/>
+        <Class IRI="#Data_mining_technique_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Clustering"/>
+        <Class IRI="#Data_mining_technique_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Data_mining_technique_function"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000034"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Design_detail"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Deviation_detection"/>
+        <Class IRI="#Data_mining_technique_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Failure"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Failure_mode"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Failure_mode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#describes_failure"/>
+            <Class IRI="#Failure"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fault_detection"/>
+        <Class IRI="#Predictive_maintenance_module_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fault_detection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Association_discovery"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fault_detection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Classification"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fault_detection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Deviation_detection"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fault_feature_extraction"/>
+        <Class IRI="#Predictive_maintenance_module_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fault_feature_extraction"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Association_discovery"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fault_feature_extraction"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Deviation_detection"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fault_feature_extraction"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Sequential_pattern_discovery"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fault_identification"/>
+        <Class IRI="#Predictive_maintenance_module_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fault_identification"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Association_discovery"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fault_identification"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Classification"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Future_state_forecast"/>
+        <Class IRI="#Predictive_maintenance_module_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Future_state_forecast"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Regression"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Future_state_forecast"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Sequential_pattern_discovery"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Health_assessment"/>
+        <Class IRI="#Predictive_maintenance_module_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Health_assessment"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Classification"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Health_assessment"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Sequential_pattern_discovery"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Health_modelling"/>
+        <Class IRI="#Predictive_maintenance_module_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Health_modelling"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Clustering"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Health_modelling"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Sequential_pattern_discovery"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Model_configuration"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Model_configuration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#describes_configuration"/>
+            <Class IRI="#Predictive_maintenance_model"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Model_configuration"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_text_value"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Model_type"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Model_type"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#describes_type"/>
+            <Class IRI="#Predictive_maintenance_model"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Module_synchronization"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Number_of_failure_modes"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Performance_indicator"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Performance_indicator"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/describes"/>
+            <Class IRI="#Predictive_maintenance_system_module"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Performance_value"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Performance_value"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_about"/>
+            <Class IRI="#Performance_indicator"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_Maintenance_Article"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/InformationBearingArtifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_Maintenance_Article"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_identifier"/>
+            <Class IRI="#Article_identifier"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_Maintenance_Article"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_publication_year"/>
+            <Class IRI="#Publication_year"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_Maintenance_Article"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_title"/>
+            <Class IRI="#Article_title"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_Maintenance_case_base"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/Database"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_Maintenance_case_base"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0010002"/>
+            <Class IRI="#Predictive_maintence_case"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_maintenance_model"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/Algorithm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_maintenance_model"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_about"/>
+            <Class IRI="#item"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_maintenance_module_function"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000034"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_maintenance_system_module"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/InformationProcessingArtifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_maintenance_system_module"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0010002"/>
+            <Class IRI="#Predictive_maintenance_model"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_maintenance_system_module"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_design_detail"/>
+            <Class IRI="#Design_detail"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_maintenance_system_module"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_predictive_maintenance_function"/>
+            <Class IRI="#Predictive_maintenance_module_function"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_maintenance_system_module"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_synchronization"/>
+            <Class IRI="#Module_synchronization"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_maintence_case"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DesignativeName"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_maintence_case"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/designates"/>
+            <Class IRI="#Predictive_maintenance_model"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_maintence_case"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#explained_in"/>
+            <Class IRI="#Predictive_Maintenance_Article"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Publication_year"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Publication_year"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_about"/>
+            <Class IRI="#Predictive_Maintenance_Article"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Publication_year"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_about"/>
+            <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/CalendarYear"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Publication_year"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_interger_value"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Regression"/>
+        <Class IRI="#Data_mining_technique_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Remaining_useful_life_estimation"/>
+        <Class IRI="#Predictive_maintenance_module_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Remaining_useful_life_estimation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Classification"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Remaining_useful_life_estimation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Regression"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sequential_pattern_discovery"/>
+        <Class IRI="#Data_mining_technique_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#item"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#item"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000085"/>
+            <Class IRI="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#item_type"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#item_type"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#describes_type"/>
+            <Class IRI="#item"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#configuration_described_by"/>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/described_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#describes_configuration"/>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/describes"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#describes_failure"/>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/describes"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#describes_type"/>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/describes"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#explained_in"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0010001"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#explains"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0010002"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#failure_described_by"/>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/described_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_design_detail"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000086"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_identifier"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0010002"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_predictive_maintenance_function"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000085"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_publication_year"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0010002"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_synchronization"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000086"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_title"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0010002"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#type_described_by"/>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/described_by"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#configuration_described_by"/>
+        <ObjectProperty IRI="#describes_configuration"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#describes_failure"/>
+        <ObjectProperty IRI="#failure_described_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#describes_type"/>
+        <ObjectProperty IRI="#type_described_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#explained_in"/>
+        <ObjectProperty IRI="#explains"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#implies"/>
+        <ObjectProperty IRI="#is_implied_by"/>
+    </InverseObjectProperties>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#has_interger_value"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_double_value"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_interger_value"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_text_value"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000034</IRI>
+        <Literal>Function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Article_identifier</IRI>
+        <Literal>An Artifact Indentifier entity that designates some article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Article_identifier</IRI>
+        <Literal>Article identifier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Article_title</IRI>
+        <Literal>A Designative Name for some article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Article_title</IRI>
+        <Literal>Article title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Design_detail</IRI>
+        <Literal>A generic quality of predictive maintenance modules that contains important design details that have not been previously designated in other classes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Design_detail</IRI>
+        <Literal>Design detail</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Failure</IRI>
+        <Literal>Termination of the ability of an item to perform a required function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Failure</IRI>
+        <Literal>Failure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Failure_mode</IRI>
+        <Literal>Manner in which a failure occurs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Failure_mode</IRI>
+        <Literal>Failure mode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Model_configuration</IRI>
+        <Literal>An arrangement of models in a predictive maintenance module</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Model_configuration</IRI>
+        <Literal>Model configuration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Model_type</IRI>
+        <Literal>Model type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Module_synchronization</IRI>
+        <Literal>A quality of a predictive maintenance module that help to classify the work syncronization with the maintenanble item between online and off-line</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Module_synchronization</IRI>
+        <Literal>Module Synchronization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Number_of_failure_modes</IRI>
+        <Literal>A quality of a maintenable item, limited to an integer value.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Number_of_failure_modes</IRI>
+        <Literal>number of failures modes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Performance_indicator</IRI>
+        <Literal>Performance indicator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Performance_value</IRI>
+        <Literal>Performance value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Predictive_Maintenance_Article</IRI>
+        <Literal>An Information Bearing Artifact that is designed to bear a specific brief composition on predictive mainenance topic as part of a Journal Issue or conference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Predictive_Maintenance_Article</IRI>
+        <Literal>Predictive Maintenance Article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Predictive_Maintenance_case_base</IRI>
+        <Literal>An information Bearing Artifact  that is designed to bear a set of cases for case-based reasoning in the predictive maintenance domain. A CCO:Database subclass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Predictive_Maintenance_case_base</IRI>
+        <Literal>Predictive Maintenance case base</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Predictive_maintenance_model</IRI>
+        <Literal>A Directive Information Content Entity that consist of a set of propositions for predictive maintenance purposes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Predictive_maintenance_model</IRI>
+        <Literal>Predictictive maintenance model</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Predictive_maintence_case</IRI>
+        <Literal>A designative information content entity that provides a name to a case in a case base. It is about a predictive maintenance model explained in a predictive maintenance article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Predictive_maintence_case</IRI>
+        <Literal>Predictive maintenance case</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#describes_failure</IRI>
+        <Literal>describes failure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>#has_double_value</IRI>
+        <Literal>Similar to the CCO: has double value, but it is not only linked to Information Bearing Entities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#has_double_value</IRI>
+        <Literal>Constrain for classes whose instances value can only be doubles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_double_value</IRI>
+        <Literal>has double value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>#has_interger_value</IRI>
+        <Literal>Similar to the CCO: has integer value, but it is not only linked to Information Bearing Entities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#has_interger_value</IRI>
+        <Literal>Constrain for classes whose instances value can only be integers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_interger_value</IRI>
+        <Literal>has interger value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>#has_text_value</IRI>
+        <Literal>Similar to the CCO: has text value, but it is not only linked to Information Bearing Entities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#has_text_value</IRI>
+        <Literal>Constrain for classes whose instances value can only be strings</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_text_value</IRI>
+        <Literal>has text value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_implied_by</IRI>
+        <Literal>is implied by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#item_type</IRI>
+        <Literal>item type</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
