@@ -6,15 +6,62 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD">
-    <Prefix name="" IRI="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/forCBR"/>
+    <Prefix name="" IRI="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/ArtifactOntology</Import>
-    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/EventOntology</Import>
-    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2019-12-20/InformationEntityOntology</Import>
+    <Import>http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/ArtifactOntology</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/EventOntology</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/ExtendedRelationOntology</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/GeospatialOntology</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/InformationEntityOntology</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/TimeOntology</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Upper/2021-03-01/ROImport</Import>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000034"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/Algorithm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/Artifact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/ArtifactIdentifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/CalendarYear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/Database"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DesignativeName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/InformationBearingArtifact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/InformationProcessingArtifact"/>
+    </Declaration>
     <Declaration>
         <Class IRI="#Article_identifier"/>
     </Declaration>
@@ -124,6 +171,33 @@
         <Class IRI="#number_if_input_variables"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000085"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000086"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0010001"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0010002"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/described_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/describes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/designates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_about"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_affected_by"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#configuration_described_by"/>
     </Declaration>
     <Declaration>
@@ -179,6 +253,12 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#has_text_value"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/Artifact"/>
