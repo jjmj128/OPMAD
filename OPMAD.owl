@@ -1,884 +1,1211 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#"
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:CommonCoreOntologies="http://www.ontologyrepository.com/CommonCoreOntologies/">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD">
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl"/>
-        <owl:imports rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/GeospatialOntology"/>
-        <owl:imports rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/TimeOntology"/>
-        <owl:imports rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/ArtifactOntology"/>
-        <owl:imports rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/EventOntology"/>
-        <owl:imports rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/ExtendedRelationOntology"/>
-        <owl:imports rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/InformationEntityOntology"/>
-        <owl:imports rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Upper/ROImport"/>
-    </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#configuration_described_by -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#configuration_described_by">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/described_by"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#describes_configuration"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#describes_configuration -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#describes_configuration">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/describes"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#describes_failure -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#describes_failure">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/describes"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#failure_described_by"/>
-        <rdfs:label>describes failure</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#describes_type -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#describes_type">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/describes"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#type_described_by"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#explained_in -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#explained_in">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0010001"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#explains"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#explains -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#explains">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0010002"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#failure_described_by -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#failure_described_by">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/described_by"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_design_detail -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_design_detail">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_identifier -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_identifier">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0010002"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_predictive_maintenance_function -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_predictive_maintenance_function">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000085"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_publication_year -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_publication_year">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0010002"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_synchronization -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_synchronization">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_title -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_title">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0010002"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#implies -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#implies">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#is_implied_by"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#is_implied_by -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#is_implied_by">
-        <rdfs:label>is implied by</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#type_described_by -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#type_described_by">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/described_by"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_double_value -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_double_value">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-        <obo:IAO_0000116>Similar to the CCO: has double value, but it is not only linked to Information Bearing Entities</obo:IAO_0000116>
-        <CommonCoreOntologies:definition>Constrain for classes whose instances value can only be doubles</CommonCoreOntologies:definition>
-        <rdfs:label>information has double value</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_interger_value -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_interger_value">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <obo:IAO_0000116>Similar to the CCO: has integer value, but it is not only linked to Information Bearing Entities</obo:IAO_0000116>
-        <CommonCoreOntologies:definition>Constrain for classes whose instances value can only be integers</CommonCoreOntologies:definition>
-        <rdfs:label>information has interger value</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_text_value -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_text_value">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <obo:IAO_0000116>Similar to the CCO: has text value, but it is not only linked to Information Bearing Entities</obo:IAO_0000116>
-        <CommonCoreOntologies:definition>Constrain for classes whose instances value can only be strings</CommonCoreOntologies:definition>
-        <rdfs:label>information has text value</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000034 -->
-
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000034">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/is_affected_by"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Failure"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>Function</rdfs:label>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.ontologyrepository.com/CommonCoreOntologies/Artifact -->
-
-    <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/Artifact">
-        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Maintainable_item"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Article_identifier -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Article_identifier">
-        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/ArtifactIdentifier"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/is_about"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_Maintenance_Article"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_text_value"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <CommonCoreOntologies:definition>An Artifact Indentifier entity that designates some article</CommonCoreOntologies:definition>
-        <rdfs:label>Article identifier</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Article_title -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Article_title">
-        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DesignativeName"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/is_about"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_Maintenance_Article"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_text_value"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <CommonCoreOntologies:definition>A Designative Name for some article</CommonCoreOntologies:definition>
-        <rdfs:label>Article title</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Association_discovery -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Association_discovery">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Data_mining_technique_function"/>
-        <CommonCoreOntologies:definition>A function whose purpose is the discovery of association pattern from data</CommonCoreOntologies:definition>
-        <rdfs:label>association discovery</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Classification -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Classification">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Data_mining_technique_function"/>
-        <CommonCoreOntologies:definition>A function whose purpose is the separation of data based on predefined parameters</CommonCoreOntologies:definition>
-        <rdfs:label>classification</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Clustering -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Clustering">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Data_mining_technique_function"/>
-        <CommonCoreOntologies:definition>A function whose purpose is the agrupation of data with similar characteristics</CommonCoreOntologies:definition>
-        <rdfs:label>clustering</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Data_mining_technique_function -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Data_mining_technique_function">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
-        <CommonCoreOntologies:definition>An realizable entity that is the purpose of data mining technique</CommonCoreOntologies:definition>
-        <rdfs:label>data mining technique fucntion</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Data_variable -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Data_variable">
-        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Design_detail -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Design_detail">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <CommonCoreOntologies:definition>A generic quality of predictive maintenance modules that contains important design details that have not been previously designated in other classes.</CommonCoreOntologies:definition>
-        <rdfs:label>Design detail</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Deviation_detection -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Deviation_detection">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Data_mining_technique_function"/>
-        <CommonCoreOntologies:definition>A function whose purpose is to detect changes in the known behavior of a set of data</CommonCoreOntologies:definition>
-        <rdfs:label>deviation detection</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Failure -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Failure">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <CommonCoreOntologies:definition>Termination of the ability of an item to perform a required function</CommonCoreOntologies:definition>
-        <rdfs:label>Failure</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Failure_mode -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Failure_mode">
-        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#describes_failure"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Failure"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <CommonCoreOntologies:definition>Manner in which a failure occurs</CommonCoreOntologies:definition>
-        <rdfs:label>Failure mode</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Fault_detection -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Fault_detection">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_module_function"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#implies"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Association_discovery"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#implies"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Classification"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#implies"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Deviation_detection"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <CommonCoreOntologies:definition>A function whose purpose is the search of faults by assessing some maintenable item parameters</CommonCoreOntologies:definition>
-        <rdfs:label>Fault detection</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Fault_feature_extraction -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Fault_feature_extraction">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_module_function"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#implies"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Association_discovery"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#implies"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Deviation_detection"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#implies"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Sequential_pattern_discovery"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <CommonCoreOntologies:definition>A function whose purpose is purpose is the identification of symptoms that correspond to a specific fault</CommonCoreOntologies:definition>
-        <rdfs:label>Fault feature extraction</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Fault_identification -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Fault_identification">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_module_function"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#implies"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Association_discovery"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#implies"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Classification"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <CommonCoreOntologies:definition>A function whose purpose is the comparison of the symtoms against known criteria to identify a specific fault</CommonCoreOntologies:definition>
-        <rdfs:label>Fault identification</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Future_state_forecast -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Future_state_forecast">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_module_function"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#implies"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Regression"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#implies"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Sequential_pattern_discovery"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <CommonCoreOntologies:definition>A function whose purpose is the forecast of the condition for the next cycle operational cycle based on the current state of the maintenanble item</CommonCoreOntologies:definition>
-        <rdfs:label>Future state forecast</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Health_assessment -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Health_assessment">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_module_function"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#implies"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Classification"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#implies"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Sequential_pattern_discovery"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <CommonCoreOntologies:definition>A function whose purpose is to rate the current condition of a maintainable item against a predefined scale</CommonCoreOntologies:definition>
-        <rdfs:label>Health assessment</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Health_modelling -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Health_modelling">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_module_function"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#implies"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Clustering"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#implies"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Sequential_pattern_discovery"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <CommonCoreOntologies:definition>A function whose purpose is to establish a scale to rate the condition of a maintainable item</CommonCoreOntologies:definition>
-        <rdfs:label>Health modelling</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Maintainable_item -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Maintainable_item">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000085"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000116>definition based on IEC 60812:2018</obo:IAO_0000116>
-        <CommonCoreOntologies:definition>Subject being considered for maintenance</CommonCoreOntologies:definition>
-        <rdfs:label>Maintainable item</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Model_configuration -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Model_configuration">
-        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#describes_configuration"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_model"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_text_value"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <CommonCoreOntologies:definition>An arrangement of models in a predictive maintenance module</CommonCoreOntologies:definition>
-        <rdfs:label>Model configuration</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Model_type -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Model_type">
-        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#describes_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_model"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <CommonCoreOntologies:definition>A descriptive information content entity that describes the family of a predicitive maintenance model</CommonCoreOntologies:definition>
-        <rdfs:label>Model type</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Module_synchronization -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Module_synchronization">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <CommonCoreOntologies:definition>A quality of a predictive maintenance module that help to classify the work syncronization with the maintenanble item between online and off-line</CommonCoreOntologies:definition>
-        <rdfs:label>Module Synchronization</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Multiple_steps_future_state_forecast -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Multiple_steps_future_state_forecast">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Future_state_forecast"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Number_of_failure_modes -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Number_of_failure_modes">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <CommonCoreOntologies:definition>A quality that states the number of failures modes that are known from a maintainable item</CommonCoreOntologies:definition>
-        <rdfs:label>number of failures modes</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#One_step_future_state_forecast -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#One_step_future_state_forecast">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Future_state_forecast"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Performance_indicator -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Performance_indicator">
-        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/describes"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_system_module"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>Performance indicator</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Performance_value -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Performance_value">
-        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/is_about"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Performance_indicator"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>Performance value</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_Maintenance_Article -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_Maintenance_Article">
-        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/InformationBearingArtifact"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_identifier"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Article_identifier"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_publication_year"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Publication_year"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_title"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Article_title"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <CommonCoreOntologies:definition>An Information Bearing Artifact that is designed to bear a specific brief composition on predictive mainenance topic as part of a Journal Issue or conference</CommonCoreOntologies:definition>
-        <rdfs:label>Predictive Maintenance Article</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_Maintenance_case_base -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_Maintenance_case_base">
-        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Database"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0010002"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_case"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <CommonCoreOntologies:definition>An information Bearing Artifact  that is designed to bear a set of cases for case-based reasoning in the predictive maintenance domain. A CCO:Database subclass</CommonCoreOntologies:definition>
-        <rdfs:label>Predictive Maintenance case base</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_case -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_case">
-        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DesignativeName"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/designates"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_model"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#explained_in"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_Maintenance_Article"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <CommonCoreOntologies:definition>A designative information content entity that provides a name to a case in a case base. It is about a predictive maintenance model explained in a predictive maintenance article</CommonCoreOntologies:definition>
-        <rdfs:label>Predictive maintenance case</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_model -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_model">
-        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Algorithm"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/is_about"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Maintainable_item"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <CommonCoreOntologies:definition>A Directive Information Content Entity that consist of a set of propositions for predictive maintenance purposes</CommonCoreOntologies:definition>
-        <rdfs:label>Predictictive maintenance model</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_module_function -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_module_function">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
-        <CommonCoreOntologies:definition>An realizable entity that is the purpose of a predictive maintenance module</CommonCoreOntologies:definition>
-        <rdfs:label>predictive maintenance module function</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_system_module -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_system_module">
-        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/InformationProcessingArtifact"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0010002"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_model"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_design_detail"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Design_detail"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_predictive_maintenance_function"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_module_function"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_synchronization"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Module_synchronization"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Publication_year -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Publication_year">
-        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/is_about"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_Maintenance_Article"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/is_about"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/CalendarYear"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_interger_value"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <CommonCoreOntologies:definition>A integer value that represents the Gregorian year in which an article was publised</CommonCoreOntologies:definition>
-        <rdfs:label>Publication year</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Regression -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Regression">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Data_mining_technique_function"/>
-        <CommonCoreOntologies:definition>A function whose purpose is the search of trends in data</CommonCoreOntologies:definition>
-        <rdfs:label>regression</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Remaining_useful_life_estimation -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Remaining_useful_life_estimation">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_module_function"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#implies"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Classification"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#implies"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Regression"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <CommonCoreOntologies:definition>A function whose purpose is the forecast of the remining operational life based on the current state of the maintenanble item</CommonCoreOntologies:definition>
-        <rdfs:label>Remaining useful life estimation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Sequential_pattern_discovery -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Sequential_pattern_discovery">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Data_mining_technique_function"/>
-        <CommonCoreOntologies:definition>A function whose purpose is the search of sequential patterns</CommonCoreOntologies:definition>
-        <rdfs:label>sequential pattern discovery</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#item_type -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#item_type">
-        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#describes_type"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Maintainable_item"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <CommonCoreOntologies:definition>A descriptive information content entity that describes the family of an item from the predicitive maintenance perspective</CommonCoreOntologies:definition>
-        <rdfs:label>item type</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#maintainable_item_record -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#maintainable_item_record">
-        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Database"/>
-        <rdfs:label>maintainable item record</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#number_if_input_variables -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#number_if_input_variables">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <CommonCoreOntologies:definition>A quality that states the number of input variables that are used in a predictive maintenance model for a specific item in predictive maintenance case.</CommonCoreOntologies:definition>
-        <rdfs:label>number of input variables</rdfs:label>
-    </owl:Class>
-</rdf:RDF>
+     ontologyIRI="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD">
+    <Prefix name="" IRI="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/ArtifactOntology</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/EventOntology</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/ExtendedRelationOntology</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/GeospatialOntology</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/InformationEntityOntology</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/TimeOntology</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Upper/2021-03-01/ROImport</Import>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000034"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/Algorithm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/Artifact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/ArtifactIdentifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/CalendarYear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/Database"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DesignativeName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/InformationBearingArtifact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/InformationProcessingArtifact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Article_identifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Article_title"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Association_discovery"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Classification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Clustering"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Data_mining_technique_function"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Design_detail"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Deviation_detection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Failure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Failure_mode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fault_detection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fault_feature_extraction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fault_identification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Future_state_forecast"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Health_assessment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Health_modelling"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Model_configuration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Model_type"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Module_synchronization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Number_of_failure_modes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Performance_indicator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Performance_value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Predictive_Maintenance_Article"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Predictive_Maintenance_case_base"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Predictive_maintenance_model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Predictive_maintenance_module_function"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Predictive_maintenance_system_module"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Predictive_maintence_case"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Publication_year"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Regression"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Remaining_useful_life_estimation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sequential_pattern_discovery"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#item_type"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#maintenanble_item"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#maintenanble_item_record"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#number_if_input_variables"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000085"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000086"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0010001"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0010002"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/described_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/describes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/designates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_about"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_affected_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#configuration_described_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#describes_configuration"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#describes_failure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#describes_type"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#explained_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#explains"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#failure_described_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_design_detail"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_identifier"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_predictive_maintenance_function"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_publication_year"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_synchronization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_title"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#implies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_implied_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#type_described_by"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_double_value"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_interger_value"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_text_value"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/Artifact"/>
+        <Class IRI="#maintenanble_item"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_affected_by"/>
+            <Class IRI="#Failure"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article_identifier"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/ArtifactIdentifier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article_identifier"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_about"/>
+            <Class IRI="#Predictive_Maintenance_Article"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article_identifier"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_text_value"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article_title"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DesignativeName"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article_title"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_about"/>
+            <Class IRI="#Predictive_Maintenance_Article"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article_title"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_text_value"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Association_discovery"/>
+        <Class IRI="#Data_mining_technique_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Classification"/>
+        <Class IRI="#Data_mining_technique_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Clustering"/>
+        <Class IRI="#Data_mining_technique_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Data_mining_technique_function"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000034"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Design_detail"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Deviation_detection"/>
+        <Class IRI="#Data_mining_technique_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Failure"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Failure_mode"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Failure_mode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#describes_failure"/>
+            <Class IRI="#Failure"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fault_detection"/>
+        <Class IRI="#Predictive_maintenance_module_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fault_detection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Association_discovery"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fault_detection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Classification"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fault_detection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Deviation_detection"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fault_feature_extraction"/>
+        <Class IRI="#Predictive_maintenance_module_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fault_feature_extraction"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Association_discovery"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fault_feature_extraction"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Deviation_detection"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fault_feature_extraction"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Sequential_pattern_discovery"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fault_identification"/>
+        <Class IRI="#Predictive_maintenance_module_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fault_identification"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Association_discovery"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fault_identification"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Classification"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Future_state_forecast"/>
+        <Class IRI="#Predictive_maintenance_module_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Future_state_forecast"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Regression"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Future_state_forecast"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Sequential_pattern_discovery"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Health_assessment"/>
+        <Class IRI="#Predictive_maintenance_module_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Health_assessment"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Classification"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Health_assessment"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Sequential_pattern_discovery"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Health_modelling"/>
+        <Class IRI="#Predictive_maintenance_module_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Health_modelling"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Clustering"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Health_modelling"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Sequential_pattern_discovery"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Model_configuration"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Model_configuration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#describes_configuration"/>
+            <Class IRI="#Predictive_maintenance_model"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Model_configuration"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_text_value"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Model_type"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Model_type"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#describes_type"/>
+            <Class IRI="#Predictive_maintenance_model"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Module_synchronization"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Number_of_failure_modes"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Performance_indicator"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Performance_indicator"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/describes"/>
+            <Class IRI="#Predictive_maintenance_system_module"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Performance_value"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Performance_value"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_about"/>
+            <Class IRI="#Performance_indicator"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_Maintenance_Article"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/InformationBearingArtifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_Maintenance_Article"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_identifier"/>
+            <Class IRI="#Article_identifier"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_Maintenance_Article"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_publication_year"/>
+            <Class IRI="#Publication_year"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_Maintenance_Article"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_title"/>
+            <Class IRI="#Article_title"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_Maintenance_case_base"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/Database"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_Maintenance_case_base"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0010002"/>
+            <Class IRI="#Predictive_maintence_case"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_maintenance_model"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/Algorithm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_maintenance_model"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_about"/>
+            <Class IRI="#maintenanble_item"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_maintenance_module_function"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000034"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_maintenance_system_module"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/InformationProcessingArtifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_maintenance_system_module"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0010002"/>
+            <Class IRI="#Predictive_maintenance_model"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_maintenance_system_module"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_design_detail"/>
+            <Class IRI="#Design_detail"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_maintenance_system_module"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_predictive_maintenance_function"/>
+            <Class IRI="#Predictive_maintenance_module_function"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_maintenance_system_module"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_synchronization"/>
+            <Class IRI="#Module_synchronization"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_maintence_case"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DesignativeName"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_maintence_case"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/designates"/>
+            <Class IRI="#Predictive_maintenance_model"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Predictive_maintence_case"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#explained_in"/>
+            <Class IRI="#Predictive_Maintenance_Article"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Publication_year"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Publication_year"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_about"/>
+            <Class IRI="#Predictive_Maintenance_Article"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Publication_year"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_about"/>
+            <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/CalendarYear"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Publication_year"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_interger_value"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Regression"/>
+        <Class IRI="#Data_mining_technique_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Remaining_useful_life_estimation"/>
+        <Class IRI="#Predictive_maintenance_module_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Remaining_useful_life_estimation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Classification"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Remaining_useful_life_estimation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#implies"/>
+            <Class IRI="#Regression"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sequential_pattern_discovery"/>
+        <Class IRI="#Data_mining_technique_function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#item_type"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#item_type"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#describes_type"/>
+            <Class IRI="#maintenanble_item"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#maintenanble_item"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#maintenanble_item"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000085"/>
+            <Class IRI="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#maintenanble_item_record"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/Database"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#number_if_input_variables"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#configuration_described_by"/>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/described_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#describes_configuration"/>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/describes"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#describes_failure"/>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/describes"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#describes_type"/>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/describes"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#explained_in"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0010001"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#explains"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0010002"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#failure_described_by"/>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/described_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_design_detail"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000086"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_identifier"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0010002"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_predictive_maintenance_function"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000085"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_publication_year"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0010002"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_synchronization"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000086"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_title"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0010002"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#type_described_by"/>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/described_by"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#configuration_described_by"/>
+        <ObjectProperty IRI="#describes_configuration"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#describes_failure"/>
+        <ObjectProperty IRI="#failure_described_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#describes_type"/>
+        <ObjectProperty IRI="#type_described_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#explained_in"/>
+        <ObjectProperty IRI="#explains"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#implies"/>
+        <ObjectProperty IRI="#is_implied_by"/>
+    </InverseObjectProperties>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#has_interger_value"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_double_value"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_interger_value"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_text_value"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000034</IRI>
+        <Literal>Function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Article_identifier</IRI>
+        <Literal>An Artifact Indentifier entity that designates some article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Article_identifier</IRI>
+        <Literal>Article identifier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Article_title</IRI>
+        <Literal>A Designative Name for some article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Article_title</IRI>
+        <Literal>Article title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Association_discovery</IRI>
+        <Literal>A function whose purpose is the discovery of association pattern from data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Association_discovery</IRI>
+        <Literal>association discovery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Classification</IRI>
+        <Literal>A function whose purpose is the separation of data based on predefined parameters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Classification</IRI>
+        <Literal>classification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Clustering</IRI>
+        <Literal>A function whose purpose is the agrupation of data with similar characteristics</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Clustering</IRI>
+        <Literal>clustering</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Data_mining_technique_function</IRI>
+        <Literal>An realizable entity that is the purpose of data mining technique</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Data_mining_technique_function</IRI>
+        <Literal>data mining technique fucntion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Design_detail</IRI>
+        <Literal>A generic quality of predictive maintenance modules that contains important design details that have not been previously designated in other classes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Design_detail</IRI>
+        <Literal>Design detail</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Deviation_detection</IRI>
+        <Literal>A function whose purpose is to detect changes in the known behavior of a set of data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Deviation_detection</IRI>
+        <Literal>deviation detection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Failure</IRI>
+        <Literal>Termination of the ability of an item to perform a required function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Failure</IRI>
+        <Literal>Failure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Failure_mode</IRI>
+        <Literal>Manner in which a failure occurs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Failure_mode</IRI>
+        <Literal>Failure mode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Fault_detection</IRI>
+        <Literal>A function whose purpose is the search of faults by assessing some maintenable item parameters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Fault_detection</IRI>
+        <Literal>Fault detection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Fault_feature_extraction</IRI>
+        <Literal>A function whose purpose is purpose is the identification of symptoms that correspond to a specific fault</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Fault_feature_extraction</IRI>
+        <Literal>Fault feature extraction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Fault_identification</IRI>
+        <Literal>A function whose purpose is the comparison of the symtoms against known criteria to identify a specific fault</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Fault_identification</IRI>
+        <Literal>Fault identification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Future_state_forecast</IRI>
+        <Literal>A function whose purpose is the forecast of the condition for the next cycle operational cycle based on the current state of the maintenanble item</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Future_state_forecast</IRI>
+        <Literal>Future state forecast</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Health_assessment</IRI>
+        <Literal>A function whose purpose is to rate the current condition of a maintainable item against a predefined scale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Health_assessment</IRI>
+        <Literal>Health assessment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Health_modelling</IRI>
+        <Literal>A function whose purpose is to establish a scale to rate the condition of a maintainable item</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Health_modelling</IRI>
+        <Literal>Health modelling</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Model_configuration</IRI>
+        <Literal>An arrangement of models in a predictive maintenance module</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Model_configuration</IRI>
+        <Literal>Model configuration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Model_type</IRI>
+        <Literal>A descriptive information content entity that describes the family of a predicitive maintenance model</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Model_type</IRI>
+        <Literal>Model type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Module_synchronization</IRI>
+        <Literal>A quality of a predictive maintenance module that help to classify the work syncronization with the maintenanble item between online and off-line</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Module_synchronization</IRI>
+        <Literal>Module Synchronization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Number_of_failure_modes</IRI>
+        <Literal>A quality that states the number of failures modes that are known from a maintainable item</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Number_of_failure_modes</IRI>
+        <Literal>number of failures modes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Performance_indicator</IRI>
+        <Literal>Performance indicator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Performance_value</IRI>
+        <Literal>Performance value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Predictive_Maintenance_Article</IRI>
+        <Literal>An Information Bearing Artifact that is designed to bear a specific brief composition on predictive mainenance topic as part of a Journal Issue or conference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Predictive_Maintenance_Article</IRI>
+        <Literal>Predictive Maintenance Article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Predictive_Maintenance_case_base</IRI>
+        <Literal>An information Bearing Artifact  that is designed to bear a set of cases for case-based reasoning in the predictive maintenance domain. A CCO:Database subclass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Predictive_Maintenance_case_base</IRI>
+        <Literal>Predictive Maintenance case base</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Predictive_maintenance_model</IRI>
+        <Literal>A Directive Information Content Entity that consist of a set of propositions for predictive maintenance purposes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Predictive_maintenance_model</IRI>
+        <Literal>Predictictive maintenance model</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Predictive_maintenance_module_function</IRI>
+        <Literal>An realizable entity that is the purpose of a predictive maintenance module</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Predictive_maintenance_module_function</IRI>
+        <Literal>predictive maintenance module function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Predictive_maintence_case</IRI>
+        <Literal>A designative information content entity that provides a name to a case in a case base. It is about a predictive maintenance model explained in a predictive maintenance article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Predictive_maintence_case</IRI>
+        <Literal>Predictive maintenance case</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Publication_year</IRI>
+        <Literal>A integer value that represents the Gregorian year in which an article was publised</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Publication_year</IRI>
+        <Literal>Publication year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Regression</IRI>
+        <Literal>A function whose purpose is the search of trends in data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Regression</IRI>
+        <Literal>regression</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Remaining_useful_life_estimation</IRI>
+        <Literal>A function whose purpose is the forecast of the remining operational life based on the current state of the maintenanble item</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Remaining_useful_life_estimation</IRI>
+        <Literal>Remaining useful life estimation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#Sequential_pattern_discovery</IRI>
+        <Literal>A function whose purpose is the search of sequential patterns</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sequential_pattern_discovery</IRI>
+        <Literal>sequential pattern discovery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#describes_failure</IRI>
+        <Literal>describes failure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>#has_double_value</IRI>
+        <Literal>Similar to the CCO: has double value, but it is not only linked to Information Bearing Entities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#has_double_value</IRI>
+        <Literal>Constrain for classes whose instances value can only be doubles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_double_value</IRI>
+        <Literal>has double value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>#has_interger_value</IRI>
+        <Literal>Similar to the CCO: has integer value, but it is not only linked to Information Bearing Entities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#has_interger_value</IRI>
+        <Literal>Constrain for classes whose instances value can only be integers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_interger_value</IRI>
+        <Literal>has interger value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>#has_text_value</IRI>
+        <Literal>Similar to the CCO: has text value, but it is not only linked to Information Bearing Entities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#has_text_value</IRI>
+        <Literal>Constrain for classes whose instances value can only be strings</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_text_value</IRI>
+        <Literal>has text value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_implied_by</IRI>
+        <Literal>is implied by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#item_type</IRI>
+        <Literal>A descriptive information content entity that describes the family of an item from the predicitive maintenance perspective</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#item_type</IRI>
+        <Literal>item type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>#maintenanble_item</IRI>
+        <Literal>definition based on IEC 60812:2018</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#maintenanble_item</IRI>
+        <Literal>Subject being considered for maintenance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#maintenanble_item</IRI>
+        <Literal>maintenanble item</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#maintenanble_item_record</IRI>
+        <Literal>maintainable item record</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#number_if_input_variables</IRI>
+        <Literal>A quality that states the number of input variables that are used in a predictive maintenance model for a specific item in predictive maintenance case.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#number_if_input_variables</IRI>
+        <Literal>number of input variables</Literal>
+    </AnnotationAssertion>
+</Ontology>
 
 
 
