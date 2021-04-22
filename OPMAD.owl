@@ -161,6 +161,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#is_predictive_maintenance_function_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#is_predictive_maintenance_function_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000079"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#type_described_by -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#type_described_by">
@@ -701,12 +709,6 @@
         <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DesignativeName"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/designates"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_maintenance_model"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#explained_in"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#Predictive_Maintenance_Article"/>
             </owl:Restriction>
@@ -728,7 +730,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <CommonCoreOntologies:definition>A Directive Information Content Entity that consist of a set of propositions for predictive maintenance purposes</CommonCoreOntologies:definition>
-        <rdfs:label>Predictictive maintenance model</rdfs:label>
+        <rdfs:label>Predictive maintenance model</rdfs:label>
     </owl:Class>
     
 
