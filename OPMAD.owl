@@ -97,6 +97,17 @@
     
 
 
+    <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#function_uses_model -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#function_uses_model">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#is_predictive_maintenance_function_of"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0010002"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_design_detail -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_design_detail">
@@ -117,6 +128,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#has_predictive_maintenance_function">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000085"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/j.montero-jimenez/ontologies/2021/2/OPMAD#is_predictive_maintenance_function_of"/>
     </owl:ObjectProperty>
     
 
