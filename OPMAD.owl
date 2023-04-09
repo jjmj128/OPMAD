@@ -21,6 +21,8 @@
         <owl:imports rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/ExtendedRelationOntology"/>
         <owl:imports rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/InformationEntityOntology"/>
         <owl:imports rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Upper/ROImport"/>
+        <dc:contributor></dc:contributor>
+        <dc:contributor>Juan Montero</dc:contributor>
     </owl:Ontology>
     
 
